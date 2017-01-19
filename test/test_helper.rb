@@ -10,8 +10,8 @@ if ENV["COVERAGE"]
     add_filter "/test/"
   end
 
-  ENV['CODECLIMATE_REPO_TOKEN'] = ENV['CODECLIMATE_SCIESLAK']
-  CodeClimate::TestReporter.start
+  # ENV['CODECLIMATE_REPO_TOKEN'] = ENV['CODECLIMATE_SCIESLAK']
+  # CodeClimate::TestReporter.start
 
 end
 
