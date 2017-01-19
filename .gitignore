@@ -21,3 +21,11 @@ config/database.yml
 
 # Ignore code coverage report.
 /coverage/*
+
+# RVM
+.ruby*
+
+# Capistrano
+Capfile
+/config/deploy
+/config/deploy.rb
