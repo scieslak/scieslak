@@ -1,17 +1,16 @@
 language: ruby
 rvm:
-  - 2.3.3
-
+- 2.3.3
 script:
-    - bundle exec rake db:create
-    - bundle exec rake db:migrate
-    - bundle exec rails test
-
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rails test
 services:
-  - postgresql
-
+- postgresql
 addons:
-  - postgresql: "9.5"
+- postgresql: '9.5'
 env:
+  matrix:
+    secure: mm937wi0mJI+LwftuiyI3mGjEVfKjdDjPfzvwEtYgoakI553XqrUh1IzyDdtRu6Qy0oD45UscJe5L5V/MQcbYn7E08Wj27SWuzRnn4Dua2BcYD0Z1Zns94xeC2LptmGd9GlAALFhJgEO7jiTeHsKW1Q/IDAp2AgLQAqZHsFYhhI0Htcn/qRuXsmW2okCig1XpAs3VW14rCcSaq4GEgPcpBjGu+E4Q5AcauGLMU2/voa/MhatqqXtjeXRF2AqQJN7XHXWL7acq0jfzZMREJ+0I15W4CjJyWAHmJhcn6kx8qNMu7Boys9Eb12qO4N0b9gVDGfRl0HUopM9t8+u0+suXf3mNyjKAQ7Iv8i+NtNEq53CB1bHJA84hPoGRDyeq5zIPy+GfMZ+YxA4o8bU3/pucFjh8jRBPLzgqUqI+3hjyOhwClVaQCtTc2s4ms2jyD32pfuBYTVLfHgW/DYLW+FeHfFkXd5/OSBDtqYhvNdz5xtNvZKuK7JAS8sT0aUQPtaC4dCwzgfTbDypQyjPzKFht7VGHuUrFEUqK5Bagy+TcYshHTs4OtalFQJInnYKyY/ESMEMpaYjZcB+w83zvgDBASeLBFJcMe/64AJmfBR6qsEXeCFvmVrA5hWPQnWuc6PG69wPf/MQJzRVKacHDXdXjXlLS96UzBPaRrIWsU2hQEg=
 global:
-  - COVERAGE=true
+- COVERAGE=true
