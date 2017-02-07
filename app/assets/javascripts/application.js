@@ -20,21 +20,42 @@
 
 $(function(){ $(document).foundation();
 
-  $('.quote *').hide();
-  $('.quote *')
+  var title = $('.large-text');
+  var subtitle = $('.small-text');
+  var title_all = $('.quote *');
+
+  var title_text = title.text();
+  var subtitle_text = subtitle.text();
+
+  title.text("\"The expert at anything was once a beginner.\"");
+  subtitle.text("Helen Hayes")
+
+  $('.quote p').hide();
+  $('.quote div').hide();
+  $('.quote p')
     .delay(1000)
     .velocity("transition.slideUpIn", {stagger: 400 })
     .delay(1000)
     .velocity({ opacity: 0}, {
-                complete: function() { replace_header() },
+                complete: function() { replace_header(subtitle) },
                 duration: 1000
               });
+
+  function replace_header() {
+    title.text(title_text);
+    subtitle.text(subtitle_text);
+    $('.quote p')
+     .velocity("transition.slideUpIn", {stagger: 400, complete:
+        function() {
+          $('.social-media')
+            .velocity("transition.slideUpIn", {stagger: 400});
+          $('.social-media a').velocity({opacity: .3})
+        }
+    })
+  }
+
+  $('.social-media a').hover(
+    function() { $(this).fadeTo('fast', '1'); },
+    function() { $(this).fadeTo('fast', '.3'); }
+);
  });
-
-
- function replace_header() {
-   $('.quote h1').text('Slawomir Cieslak');
-   $('.quote p').text('Junior Ruby on Rails Developer');
-   $('.quote *')
-    .velocity("transition.slideUpIn", {stagger: 400 })
- }

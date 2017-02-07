@@ -18,8 +18,7 @@
 
  @import "foundation_and_overrides";
 /* Add imports of custom sass/scss files here */
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Oswald');
 // div {
 //   border: 2px solid red;
 // }
@@ -29,6 +28,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+a {
+  outline:none;
 }
 
 .container {
@@ -48,6 +51,21 @@ body {
   text-align: center;
 
 }
-#quote {
+.large-text {
+  font-size: 3em;
   font-family: 'Indie Flower', cursive;
+}
+
+.dot-devider {
+  font-size: 1em;
+}
+
+.small-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  color:#00abff;
+}
+
+.social-media {
+  padding-top: 1rem;
 }
