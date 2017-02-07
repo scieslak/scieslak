@@ -12,5 +12,29 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require velocity
+//= require velocity.ui
+//= require foundation
 //= require turbolinks
 //= require_tree .
+
+$(function(){ $(document).foundation();
+
+  $('.quote *').hide();
+  $('.quote *')
+    .delay(1000)
+    .velocity("transition.slideUpIn", {stagger: 400 })
+    .delay(1000)
+    .velocity({ opacity: 0}, {
+                complete: function() { replace_header() },
+                duration: 1000
+              });
+ });
+
+
+ function replace_header() {
+   $('.quote h1').text('Slawomir Cieslak');
+   $('.quote p').text('Junior Ruby on Rails Developer');
+   $('.quote *')
+    .velocity("transition.slideUpIn", {stagger: 400 })
+ }
