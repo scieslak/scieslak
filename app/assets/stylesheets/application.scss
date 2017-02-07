@@ -34,17 +34,22 @@ a {
   outline:none;
 }
 
+.spacer {
+  height: 10rem;
+  // background-color: pink;
+}
+
 .container {
-  position: relative;;
-  height:500px;
+  // position: relative;;
+  // height:500px;
   margin: auto;
   padding: 0;
 }
 
 .quote {
-  position: absolute;
-  top: 30%;
-  height: 100px;
+  // position: absolute;
+  // top: 30%;
+  // height: 100px;
   width: 100%;
   padding: 1rem;
   color:white;
@@ -52,7 +57,7 @@ a {
 
 }
 .large-text {
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: 'Indie Flower', cursive;
 }
 
