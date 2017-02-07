@@ -20,9 +20,9 @@
 /* Add imports of custom sass/scss files here */
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
-// div {
-//   border: 2px solid red;
-// }
+div {
+  border: 2px solid red;
+}
 body {
   background: image-url('scieslak_bg.svg') no-repeat center center;
   -webkit-background-size: cover;
@@ -35,6 +35,7 @@ body {
   position: relative;;
   height:500px;
   margin: auto;
+  padding: 0;
 }
 
 .quote {
@@ -42,6 +43,7 @@ body {
   top: 30%;
   height: 100px;
   width: 100%;
+  padding: 1rem;
   color:white;
   text-align: center;
 
