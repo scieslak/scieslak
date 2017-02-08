@@ -55,7 +55,7 @@ $(function(){ $(document).foundation();
   }
 
   $('.social-media a').hover(
-    function() { $(this).stop().fadeTo('fast', '1'); },
-    function() { $(this).stop().fadeTo('fast', '.3'); }
+    function() { $(this).fadeTo('fast', '1'); },
+    function() { $(this).fadeTo('fast', '.3'); }
 );
  });
