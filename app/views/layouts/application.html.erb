@@ -10,9 +10,7 @@
     <%= render "layouts/critical_css"%>
 
     <title><%= content_for?(:title) ? yield(:title) : "Slawomir Cieslak - Junior Ruby on Rails Developer" %></title>
-    <%# Modernizr is required for Zurb Foundation %>
-    <%#= javascript_include_tag "vendor/custom.modernizr" %>
-    <%= csrf_meta_tags %>
+    
   </head>
 
   <body>
